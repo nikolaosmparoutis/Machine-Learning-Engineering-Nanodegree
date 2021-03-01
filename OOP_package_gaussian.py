@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Gaussian Code Exercise
-# 
-# Read through the code below and fill out the TODOs. You'll find a cell at the end of the Jupyter notebook containing unit tests. After you've run the code cell with the Gaussian class, you can run the final cell to check that your code functions as expected.
-# 
-# This exercise includes a file called 'numbers.txt', which you can see if you click on the 'Jupyter' icon at the top of the workspace and then go into the folder titled 3.OOP_code_gaussian_class. The 'numbers.txt' file is read in by the read_data_file() method. There is also a solution in the 3.OOP_code_gaussian_class folder in a file called answer.py.
-
-# In[106]:
-
-
 import math
 import matplotlib.pyplot as plt
 
