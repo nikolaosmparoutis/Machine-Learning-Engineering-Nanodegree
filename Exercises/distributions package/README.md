@@ -10,4 +10,4 @@ You'll need to run `pip install --upgrade .` when you make changes to the packag
 `python -m pip show distributions`
 
 ----------------------
-  Tested OK
+  Tests Passed 
