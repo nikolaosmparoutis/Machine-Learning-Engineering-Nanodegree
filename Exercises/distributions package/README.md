@@ -7,4 +7,4 @@ Note that if you change the code in the distributions folder after pip installin
 You'll need to run `pip install --upgrade .` when you make changes to the package files.
 
 See the metadata of the package after the installation typing: 
-python -m pip show distributions
+'python -m pip show distributions'
