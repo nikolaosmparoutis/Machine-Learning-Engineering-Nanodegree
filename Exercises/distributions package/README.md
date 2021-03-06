@@ -1,4 +1,4 @@
-# In this exercise, you'll extend the Gaussian distribution package with a new class called Binomial. 
+## In this exercise, you'll extend the Gaussian distribution package with a new class called Binomial. 
 
 * When you're ready to test out your code, you'll want to pip install your distributions package and then run the unit tests.
   type `pip install .` Then run the unit tests by typing `python -m unittest test`. 
