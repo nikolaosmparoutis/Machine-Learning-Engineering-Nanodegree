@@ -8,3 +8,6 @@ You'll need to run `pip install --upgrade .` when you make changes to the packag
 
 * See the metadata of the package after the installation typing: 
 `python -m pip show distributions`
+
+----------------------
+  Tested OK
