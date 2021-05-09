@@ -35,7 +35,7 @@ class SimpleNet(nn.Module):
         self.fc2 = nn.Linear(hidden_1, hid_layer2)
         self.fc3 = nn.Linear(hid_layer2, output_dim)
         # dropout prevents overfitting of data
-        self.dropout = nn.Dropout(0.2)
+        self.drop = nn.Dropout(0.2)
         
     
     ## TODO: Define the feedforward behavior of the network
@@ -44,13 +44,16 @@ class SimpleNet(nn.Module):
            :param x: A batch of input features
            :return: A single, sigmoid activated value
          '''
-        out = F.relu(self.fc1(x))
-        x = F.leaky_relu(self.fc1(x), negative_slope=0.01)
-        x = self.dropout(x)
-        x = F.leaky_relu(self.fc2(x), negative_slope=0.01)
-        x = self.dropout(x)
-        BN = nn.BatchNorm1d(input_dim)
-        BN_x = BN(x)
-        x = F.leaky_relu(self.fc3(BN_x), negative_slope=0.01)
+         
+        x = nn.BatchNorm1d(self.fc1(x)) # usually added before ReLU(as mentioned in the Batch Normalization paper). But there is no real standard 
+        x = F.leaky_relu(x, negative_slope=0.01)      # prevent dying relu
+        x = self.drop(0.2)
+        
+        x = nn.BatchNorm1d(self.fc2(x))
+        x = F.leaky_relu(x, negative_slope=0.01)
+        x = self.drop(0.2)
+        
+        x = nn.BatchNorm1d(self.fc3(x))
+        x = F.leaky_relu(x, negative_slope=0.01)
         
         return x
