@@ -15,7 +15,7 @@ class SimpleNet(nn.Module):
         super(SimpleNet, self).__init__()
 
         #         From my past experience i use this formula to find the optimal number of nodes
-        #         Nh=Ns(α∗(Ni+No)) = 500
+        #         Nh=Ns(α∗(Ni+No))
 
         #         Ni = number of input neurons.
         #         No = number of output neurons.
