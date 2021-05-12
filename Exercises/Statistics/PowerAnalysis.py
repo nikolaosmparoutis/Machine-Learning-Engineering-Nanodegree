@@ -6,8 +6,8 @@ import scipy.stats
 
 effectSize = 0.5  # ratio mean/distance of 0.5 between the distributions
 
-""" Perform power analysis to get sample size
-    it in order to reject the Null Hypothesis for fair sample selection """
+""" Perform power analysis to get a fair sample size
+    in order to reject the Null Hypothesis for fair sample selection """
 
 power_analysis = smp.TTestIndPower()
 sampleSize = power_analysis.solve_power(
